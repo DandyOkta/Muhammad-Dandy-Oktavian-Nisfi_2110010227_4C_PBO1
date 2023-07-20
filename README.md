@@ -211,7 +211,8 @@ Aplikasi ini mengimplementasikan beberapa konsep penting dalam pemrograman beror
           
            } catch (InputMismatchException e) {
               System.out.println("Pakai ANGKA Bukan Huruf : "+e.getMessage());
-
+           }
+    
 ## Usulan nilai
 
 | No  | Materi         |  Nilai  |
@@ -236,5 +237,5 @@ Aplikasi ini mengimplementasikan beberapa konsep penting dalam pemrograman beror
 
 Nama: Muhammad Dandy Oktavian Nisfi
 NPM: 2110010227
-           }
+
     
