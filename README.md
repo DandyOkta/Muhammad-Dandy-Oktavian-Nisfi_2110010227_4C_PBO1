@@ -2,7 +2,7 @@
 Proyek ini adalah Contoh Sederhana dari game TextBasedRpg menggunakan java sebagai tugas akhir dari mata kuliah Pemrograman Berbasis Objek 1 
 
 ## Deskripsi
-Aplikasi ini menerima input berupa nama, job, senjata dan item, dan memberikan output berupa informasi Status dari job yang user pilih seperti Stat player, Equipment Player, Bonus Senjata Player dan Inventaris dari player
+Aplikasi ini menerima input berupa nama, job, senjata dan item, dan memberikan output berupa informasi Status dari job yang user pilih seperti Stat player, Equipment Player, Bonus Senjata Player dan Inventaris dari player, 
 Aplikasi ini mengimplementasikan beberapa konsep penting dalam pemrograman berorientasi objek (OOP) seperti Class, Object, Atribut, Method Constructor, Method Mutator, Method Accessor, Encapsulation, Inheritance, Overloading, Overriding, Seleksi, Perulangan, IO Sederhana, Array, dan Error Handling.
 
 1. --- Class --- adalah template atau blueprint dari object. Pada kode ini, `Player`, `PlayerStatus`, dan `Player Bermain` adalah contoh dari class.
