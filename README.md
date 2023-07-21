@@ -199,7 +199,7 @@ Aplikasi ini mengimplementasikan beberapa konsep penting dalam pemrograman beror
          System.out.print("Berapa Item yang ingin anda bawa : ");
          length = scan.nextInt();
 
-13. --- Array --- adalah struktur data yang digunakan untuk menyimpan beberapa nilai dalam satu variabel. Pada kode ini, `PlayerStatus[] player = new PlayerStatus[1];` dan `String[] item = new String[length];` adalah contoh penggunaan array.
+13. --- Array --- adalah struktur data yang digunakan untuk menyimpan beberapa nilai dalam satu variabel. Pada kode ini, `PlayerStatus[] player = new PlayerStatus[1];` dan `String[] item = new String[length];`. untuk array `String[] item = new String[length];` ini saya menggunakan perulangan  adalah contoh penggunaan array.
 
           PlayerStatus[] player = new PlayerStatus[1];
       
@@ -207,7 +207,7 @@ Aplikasi ini mengimplementasikan beberapa konsep penting dalam pemrograman beror
 
           String[] item = new String[length];
 
-15. --- Error Handling --- digunakan untuk menangani error yang mungkin terjadi saat runtime. Pada kode ini, digunakan `try catch` untuk menangani error.
+15. --- Error Handling --- digunakan untuk menangani error yang mungkin terjadi saat runtime. Pada kode ini, digunakan `try catch` untuk menangani error ketika array length diinput menggunakan Huruf Bukan Angka.
 
            try {
           
