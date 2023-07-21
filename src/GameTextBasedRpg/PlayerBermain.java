@@ -15,18 +15,20 @@ import java.util.Scanner;
 public class PlayerBermain {
     public static void main(String[] args) {
         
-        int length;
+    int length;
     
     //Try Catch
     try {
         Scanner scan = new Scanner(System.in);
         //array
         PlayerStatus[] player = new PlayerStatus[1];
-       
+        
         System.out.print("Masukkan Nama Player : ");
         String name = scan.nextLine();
+        System.out.print("====== JOB ====== \n= 1.Warrior \n= 2.Tanker \n= 3.Healer \n");
         System.out.print("Pilih No Job         : ");
         String job = scan.nextLine();
+        System.out.print("==== WEAPON ===== \n= 1.Sword \n= 2.Shield \n= 3.Staff \n");
         System.out.print("Pilih Senjata        : ");
         String weapon = scan.nextLine();
         System.out.print("Berapa Item yang ingin anda bawa : ");

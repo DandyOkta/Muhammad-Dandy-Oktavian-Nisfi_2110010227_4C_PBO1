@@ -48,12 +48,20 @@ public class Player {
         this.weapon = weapon;
     }
          
-    //Polymerphism Overloading
     public String Status(){
         return "Nama : "+getName();
     }
 
+    //Polymerphism Overloading
     public String Status(String level){
         return Status() + "\nLevel :"+level;
+    }
+    
+    public String Status(int level, String gold){
+        return Status() + "\nLevel :"+level + "\nGold :"+gold;
+    }
+    
+    public String Status(int level, String gold, String pet){
+        return Status() + "\nLevel :"+level + "\nGold :"+gold  + "\nPet :"+pet;
     }
 }

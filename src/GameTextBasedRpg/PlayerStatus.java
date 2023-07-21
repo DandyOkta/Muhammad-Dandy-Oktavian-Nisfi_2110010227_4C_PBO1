@@ -13,7 +13,7 @@ public class PlayerStatus extends Player {
     }
     
      public String getPilihan(){
-        //Percabangan If dengan Operator OR
+        //Seleksi Percabangan If dengan Operator OR
         String noJob = getJob();
         if(noJob.equals("1") || noJob.equals("Warrior")) {
             return "Warrior";
@@ -22,12 +22,12 @@ public class PlayerStatus extends Player {
         } else if(noJob.equals("3") || noJob.equals("Healer")) {
             return "Healer";
         } else {
-            return "Default Job ";
+            return "Default Job";
         }
     }
     
     public String getStat(){
-        //Seleksi/Switch Case dengan dua Seleksi kemungkinan
+        //Seleksi switch Case dengan dua Seleksi kemungkinan
         String namaJob = getJob();
         switch(namaJob){
             case "1":
@@ -45,7 +45,7 @@ public class PlayerStatus extends Player {
     }
     
      public String getBonus(){
-        //Percabangan IF menggunakan operator AND dan OR dengan membandingakn Dua data inputan 
+        //Seleksi Percabangan IF menggunakan operator AND dan OR dengan membandingakn Dua data inputan 
         String noJob = getJob();
         String Bonus = getWeapon();
         if(Bonus.equals("1") && noJob.equals("1") || Bonus.equals("Sword") && noJob.equals("Warrior")) {
@@ -61,7 +61,7 @@ public class PlayerStatus extends Player {
      
      public String getEquip(){
         String infoEquip = getWeapon();
-        //Seleksi/Switch Case dengan dua Seleksi kemungkinan
+        //Seleksi Switch Case dengan dua Seleksi kemungkinan
         switch(infoEquip){
             case "1":
             case "Sword":
@@ -78,7 +78,7 @@ public class PlayerStatus extends Player {
     }
      
      
-    //Override
+    //Polymorphis Override
     @Override
     public String Status(){
         return super.Status()+"\nJob  : "+getPilihan()+"\n=======Stat======="+getStat()+"\n=====Equipment====="+getEquip()+"\n=====Bonus====="+getBonus();
