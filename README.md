@@ -205,7 +205,9 @@ Aplikasi ini mengimplementasikan beberapa konsep penting dalam pemrograman beror
       
           player[0] = new PlayerStatus(name,job,weapon);
 
-14. --- Error Handling --- digunakan untuk menangani error yang mungkin terjadi saat runtime. Pada kode ini, digunakan `try catch` untuk menangani error.
+          String[] item = new String[length];
+
+15. --- Error Handling --- digunakan untuk menangani error yang mungkin terjadi saat runtime. Pada kode ini, digunakan `try catch` untuk menangani error.
 
            try {
           
