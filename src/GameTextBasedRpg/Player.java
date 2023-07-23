@@ -14,12 +14,26 @@ public class Player {
     private String name;
     private String job;
     private String weapon;
+    protected Integer exp;
     
     //Konstruktor
-    public Player(String name, String job, String weapon) {
+    public Player(String name, String job, String weapon, Integer exp) {
         this.name = name;
         this.job = job;
         this.weapon = weapon;
+        this.exp = exp;
+    }
+
+    void setMengalahkan(int slime) {
+        exp = exp + slime;
+    }
+    
+    public Integer getExp() {
+        return exp;
+    }
+
+    public void setExp(Integer exp) {
+        this.exp = exp;
     }
     
     //Getter
@@ -53,7 +67,7 @@ public class Player {
     }
 
     //Polymerphism Overloading
-    public String Status(String level){
+    public String Status(int level){
         return Status() + "\nLevel :"+level;
     }
     

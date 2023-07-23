@@ -16,10 +16,12 @@ public class PlayerBermain {
     public static void main(String[] args) {
         
     int length;
-    
+    String ulang = "Y";
+    while(ulang.equals("Y")) {    
     //Try Catch
     try {
         Scanner scan = new Scanner(System.in);
+        Scanner restart = new Scanner(System.in);
         //array
         PlayerStatus[] player = new PlayerStatus[1];
         
@@ -33,8 +35,8 @@ public class PlayerBermain {
         String weapon = scan.nextLine();
         System.out.print("Berapa Item yang ingin anda bawa : ");
         length = scan.nextInt();
-     
         //Array
+        
         String[] item = new String[length];
         
         //Perulangan
@@ -43,7 +45,7 @@ public class PlayerBermain {
             item[counter] = scan.next();
         }
         
-        player[0] = new PlayerStatus(name,job,weapon);
+        player[0] = new PlayerStatus(name,job,weapon,1000);
         
         System.out.println("");
         System.out.println("===================");
@@ -53,9 +55,14 @@ public class PlayerBermain {
         for(int counter =0; counter < length; counter++){
             System.out.println("=    "+item[counter]);
         }
+        System.out.println("");
+        System.out.println("Apakan Anda Ingin Mengulang Program (Y/N) : "); 
+        ulang = restart.nextLine().toUpperCase();
+        System.out.println("");
     //Try Catch
     } catch (InputMismatchException e) {
         System.out.println("Pakai ANGKA Bukan Huruf : "+e.getMessage());
     }
-      }
-    }
+   }
+ }
+}

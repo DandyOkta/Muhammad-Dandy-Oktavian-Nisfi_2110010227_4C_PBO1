@@ -7,9 +7,8 @@ package GameTextBasedRpg;
 
 //Inheritance
 public class PlayerStatus extends Player {
-
-    public PlayerStatus(String name, String job, String weapon) {
-        super(name, job, weapon);
+    public PlayerStatus(String name, String job, String weapon, Integer exp) {
+        super(name, job, weapon, exp);
     }
     
      public String getPilihan(){
@@ -77,11 +76,25 @@ public class PlayerStatus extends Player {
         }
     }
      
+    public String getPengalaman(){
+        Integer infoExp = getExp();
+        //Seleksi Switch Case dengan dua Seleksi kemungkinan
+        switch(infoExp){
+            case 1000 :
+                return "\nAnda Naik Ke Level 1";
+            case 2000:
+                return "\nAnda Naik Ke Level 2";
+            case 3000 :
+                return "\nAnda Naik Ke Level 3";
+            default:
+                return "\nLevel Tidak Naik";
+        }
+    }
      
     //Polymorphis Override
     @Override
     public String Status(){
-        return super.Status()+"\nJob  : "+getPilihan()+"\n=======Stat======="+getStat()+"\n=====Equipment====="+getEquip()+"\n=====Bonus====="+getBonus();
+        return super.Status()+"\nJob  : "+getPilihan()+"\n=======Stat======="+getStat()+"\n=======Info======="+getPengalaman()+"\n=====Equipment====="+getEquip()+"\n=====Bonus====="+getBonus();
     }
     
     }
