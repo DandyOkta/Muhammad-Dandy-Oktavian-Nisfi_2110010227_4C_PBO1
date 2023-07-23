@@ -186,8 +186,12 @@ Aplikasi ini mengimplementasikan beberapa konsep penting dalam pemrograman beror
                      System.out.println("Masukkan Nama Item "+(counter+1));
                      item[counter] = scan.next();
                  }
-
-12. -- Input Output Sederhana -- digunakan untuk menerima input dari user dan menampilkan output ke user. Pada kode ini, digunakan class `Scanner` untuk menerima input dan method `System.out.println` untuk menampilkan output.
+    
+         while(ulang.equals("Y")) {
+         ............
+         }
+    
+13. -- Input Output Sederhana -- digunakan untuk menerima input dari user dan menampilkan output ke user. Pada kode ini, digunakan class `Scanner` untuk menerima input dan method `System.out.println` untuk menampilkan output.
 
          Scanner scan = new Scanner(System.in);
          
@@ -208,8 +212,11 @@ Aplikasi ini mengimplementasikan beberapa konsep penting dalam pemrograman beror
          for(int counter =0; counter < length; counter++){
             System.out.println("=    "+item[counter]);
          }
+    
+         System.out.println("Apakan Anda Ingin Mengulang Program (Y/N) : "); 
+         ulang = restart.nextLine().toUpperCase();
 
-14. --- Array --- adalah struktur data yang digunakan untuk menyimpan beberapa nilai dalam satu variabel. Pada kode ini, `PlayerStatus[] player = new PlayerStatus[1];` dan `String[] item = new String[length];`. untuk array `String[] item = new String[length];` ini saya menggunakan perulangan  adalah contoh penggunaan array.
+15. --- Array --- adalah struktur data yang digunakan untuk menyimpan beberapa nilai dalam satu variabel. Pada kode ini, `PlayerStatus[] player = new PlayerStatus[1];` dan `String[] item = new String[length];`. untuk array `String[] item = new String[length];` ini saya menggunakan perulangan  adalah contoh penggunaan array.
 
           PlayerStatus[] player = new PlayerStatus[1];
       
@@ -217,7 +224,7 @@ Aplikasi ini mengimplementasikan beberapa konsep penting dalam pemrograman beror
 
           String[] item = new String[length];
 
-15. --- Error Handling --- digunakan untuk menangani error yang mungkin terjadi saat runtime. Pada kode ini, digunakan `try catch` untuk menangani error ketika array length diinput menggunakan Huruf Bukan Angka.
+16. --- Error Handling --- digunakan untuk menangani error yang mungkin terjadi saat runtime. Pada kode ini, digunakan `try catch` untuk menangani error ketika array length diinput menggunakan Huruf Bukan Angka.
 
            try {
           
