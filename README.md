@@ -2,7 +2,7 @@
 Proyek ini adalah Contoh Sederhana dari game TextBasedRpg menggunakan java sebagai tugas akhir dari mata kuliah Pemrograman Berbasis Objek 1 
 
 ## Deskripsi
-Aplikasi ini menerima input berupa nama, job, senjata dan item, dan memberikan output berupa informasi Status dari job yang user pilih seperti Stat player, Equipment Player, Bonus Senjata Player dan Inventaris dari player, 
+Aplikasi ini menerima input berupa nama, job, senjata dan item, dan memberikan output berupa informasi Status dari job yang user pilih seperti Stat player, Equipment Player, Bonus stat Player ketika job dan senjata yang dipilih oleh player cocok dan Inventaris dari player, 
 Aplikasi ini mengimplementasikan beberapa konsep penting dalam pemrograman berorientasi objek (OOP) seperti Class, Object, Atribut, Method Constructor, Method Mutator, Method Accessor, Encapsulation, Inheritance, Overloading, Overriding, Seleksi, Perulangan, IO Sederhana, Array, dan Error Handling.
 
 1. --- Class --- adalah template atau blueprint dari object. Pada kode ini, `Player`, `PlayerStatus`, dan `Player Bermain` adalah contoh dari class.
@@ -23,13 +23,14 @@ Aplikasi ini mengimplementasikan beberapa konsep penting dalam pemrograman beror
 
            player[0] = new PlayerStatus(name,job,weapon);
 
-3. **Atribut** adalah variabel yang ada dalam class. Pada kode ini, `name`, `job` dan `Weapon` adalah contoh atribut.
+3. **Atribut** adalah variabel yang ada dalam class. Pada kode ini, `name`, `job`,`length` dan `Weapon` adalah contoh atribut.
 
           private String name;
           private String job;
           private String weapon;
+          int length;
 
-4. --- Constructor --- adalah method yang pertama kali dijalankan pada saat pembuatan object. Pada kode ini, constructor ada di dalam class `Player` dan `PlayerStatus`.
+5. --- Constructor --- adalah method yang pertama kali dijalankan pada saat pembuatan object. Pada kode ini, constructor ada di dalam class `Player` dan `PlayerStatus`.
 
          public Player(String name, String job, String weapon) {
               this.name = name;
@@ -41,7 +42,7 @@ Aplikasi ini mengimplementasikan beberapa konsep penting dalam pemrograman beror
               super(name, job, weapon);
          }
 
-5. --- Mutator/Setter --- atau setter digunakan untuk mengubah nilai dari suatu atribut. Pada kode ini, `setName`, `setJob` dan `setWeapon` adalah contoh method mutator.
+6. --- Mutator/Setter --- atau setter digunakan untuk mengubah nilai dari suatu atribut. Pada kode ini, `setName`, `setJob` dan `setWeapon` adalah contoh method mutator.
 
           public void setName(String name) {
               this.name = name;
@@ -55,7 +56,7 @@ Aplikasi ini mengimplementasikan beberapa konsep penting dalam pemrograman beror
               this.weapon = weapon;
           }
 
-6. --- Accessor/Getter --- atau getter digunakan untuk mengambil nilai dari suatu atribut. Pada kode ini, `getName`, `getJob`, `getWeapon`, `getPilihan`, `getStat`, `getBonus` dan `getEquip` adalah contoh method accessor.
+7. --- Accessor/Getter --- atau getter digunakan untuk mengambil nilai dari suatu atribut. Pada kode ini, `getName`, `getJob`, `getWeapon`, `getPilihan`, `getStat`, `getBonus` dan `getEquip` adalah contoh method accessor.
 
           public String getName() {
               return name;
@@ -85,7 +86,7 @@ Aplikasi ini mengimplementasikan beberapa konsep penting dalam pemrograman beror
           ........
           }
 
-7. --- Encapsulation --- adalah konsep menyembunyikan data dengan membuat atribut menjadi private dan hanya bisa diakses melalui method. Pada kode ini, atribut `name`, `Job` dan `weapon` dienkapsulasi dan hanya bisa diakses melalui method getter dan setter.
+8. --- Encapsulation --- adalah konsep menyembunyikan data dengan membuat atribut menjadi private dan hanya bisa diakses melalui method. Pada kode ini, atribut `name`, `Job` dan `weapon` dienkapsulasi dan hanya bisa diakses melalui method getter dan setter.
 
          private String name;
          private String job;
@@ -112,7 +113,7 @@ Aplikasi ini mengimplementasikan beberapa konsep penting dalam pemrograman beror
               return super.Status()+"\nJob  : "+getPilihan()+"\n=======Stat======="+getStat()+"\n=====Equipment====="+getEquip()+"\n=====Bonus====="+getBonus();
           }
 
-11. --- Seleksi --- adalah statement kontrol yang digunakan untuk membuat keputusan berdasarkan kondisi. Pada kode ini, digunakan seleksi `if else` dengan operator `OR` dalam method `getPilihan`, seleksi `switch` dengan 2 kemugkinan dalam method `getStat`, seleksi `if else` dengan operator `OR(||)` `AND(&&)` dalam method `getBonus`, dan seleksi `switch` dengan 2 kemugkinan dalam method `getEquip`.
+11. --- Seleksi --- adalah statement kontrol yang digunakan untuk membuat keputusan berdasarkan kondisi. Pada kode ini, digunakan seleksi `if else` dengan operator `OR(||)` dalam method `getPilihan`, seleksi `switch` dengan 2 kemugkinan dalam method `getStat`, seleksi `if else` dengan operator `OR(||)` `AND(&&)` dalam method `getBonus`, dan seleksi `switch` dengan 2 kemugkinan dalam method `getEquip`.
 
          public String getPilihan(){
                  //Seleksi Percabangan If dengan Operator OR
@@ -179,7 +180,7 @@ Aplikasi ini mengimplementasikan beberapa konsep penting dalam pemrograman beror
               }
           }
 
-11. --- Perulangan --- adalah statement kontrol yang digunakan untuk menjalankan blok kode berulang kali. Pada kode ini, digunakan loop `for` untuk meminta input dan menampilkan data.
+11. --- Perulangan --- adalah statement kontrol yang digunakan untuk menjalankan blok kode berulang kali. Pada kode ini, digunakan loop `for` untuk meminta input dan menampilkan data dan atribut `length` sebagai patokan berapa banyak yang ingin diulang input tersebut.
 
          for(int counter =0; counter < length; counter++){
                      System.out.println("Masukkan Nama Item "+(counter+1));
@@ -199,7 +200,16 @@ Aplikasi ini mengimplementasikan beberapa konsep penting dalam pemrograman beror
          System.out.print("Berapa Item yang ingin anda bawa : ");
          length = scan.nextInt();
 
-13. --- Array --- adalah struktur data yang digunakan untuk menyimpan beberapa nilai dalam satu variabel. Pada kode ini, `PlayerStatus[] player = new PlayerStatus[1];` dan `String[] item = new String[length];`. untuk array `String[] item = new String[length];` ini saya menggunakan perulangan  adalah contoh penggunaan array.
+         System.out.println("");
+         System.out.println("===================");
+         System.out.println("=======Player======");
+         System.out.println(player[0].Status());
+         System.out.println("=====Inventory=====");
+         for(int counter =0; counter < length; counter++){
+            System.out.println("=    "+item[counter]);
+         }
+
+14. --- Array --- adalah struktur data yang digunakan untuk menyimpan beberapa nilai dalam satu variabel. Pada kode ini, `PlayerStatus[] player = new PlayerStatus[1];` dan `String[] item = new String[length];`. untuk array `String[] item = new String[length];` ini saya menggunakan perulangan  adalah contoh penggunaan array.
 
           PlayerStatus[] player = new PlayerStatus[1];
       
